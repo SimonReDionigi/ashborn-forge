@@ -6,6 +6,7 @@
  * Last Modified: 2025-08-01 by Riccardo Canali
  * 
  * Changelog:
+ * - 2025-08-02: Added configuration for each NTC sensors and ADCs
  * - 2025-08-01: Created config_protoA.h and defined the pinout of the Arduino Board and HW settings
  */
 
@@ -49,13 +50,28 @@
     #define CAP_ISENS_DISCH_FILT 1e-6 //capacitance of the discharge current sensing filter
     #define CAP_ISENS_CHRG_FILT 1e-6 //capacitance of the charge current sensing filter
     //Temperature sensor
-    #define NTC_PRT "B57861S0103F045" //part number of the NTC
-    #define NTC_NOM_RES 10000 //nominal resistance at 25°C of the NTC sensor
-    #define NTC_B25_100 3988 //Beta constant of the NTC
-    #define NTC_NOM_TEMP 25.0 //nominal NTC temperature in °C
-    #define NTC_TOLL_RES 0.01 //tolerance of the NTC resistance
-    #define NTC_TOLL_B 0.003 //tolerance of the NTC B value
-    #define NTC_VREF 5 //reference voltage of the NTC voltage divider 
+    #define NTC_CELL_PRT         "B57861S0103F045" // Part number for cell temperature NTC
+    #define NTC_CELL_CASE_PRT    "B57861S0103F045" // Part number for cell case temperature NTC
+    #define NTC_RESISTORS_PRT    "B57861S0103F045" // Part number for resistors temperature NTC
+    #define NTC_CELL_NOM_RES         10000 // Nominal resistance for cell temperature NTC
+    #define NTC_CELL_CASE_NOM_RES    10000 // Nominal resistance for cell case temperature NTC
+    #define NTC_RESISTORS_NOM_RES    10000 // Nominal resistance for resistors temperature NTC
+    #define NTC_CELL_B25_100         3988 // Beta constant for cell temperature NTC
+    #define NTC_CELL_CASE_B25_100    3988 // Beta constant for cell case temperature NTC
+    #define NTC_RESISTORS_B25_100    3988 // Beta constant for resistors temperature NTC
+    #define NTC_CELL_NOM_TEMP         25.0 // Nominal temperature for cell temperature NTC
+    #define NTC_CELL_CASE_NOM_TEMP    25.0 // Nominal temperature for cell case temperature NTC
+    #define NTC_RESISTORS_NOM_TEMP    25.0 // Nominal temperature for resistors temperature NTC
+    #define NTC_CELL_TOLL_RES         0.01 // Resistance tolerance for cell temperature NTC
+    #define NTC_CELL_CASE_TOLL_RES    0.01 // Resistance tolerance for cell case temperature NTC
+    #define NTC_RESISTORS_TOLL_RES    0.01 // Resistance tolerance for resistors temperature NTC
+    #define NTC_CELL_TOLL_B         0.003 // Beta tolerance for cell temperature NTC
+    #define NTC_CELL_CASE_TOLL_B    0.003 // Beta tolerance for cell case temperature NTC
+    #define NTC_RESISTORS_TOLL_B    0.003 // Beta tolerance for resistors temperature NTC
+    #define NTC_CELL_VREF 5.0 //Voltage reference for cell temperature NTC
+    #define NTC_CELL_CASE_VREF 5.0 //Voltage reference for cell case temperature NTC
+    #define NTC_RESISTORS_VREF 5.0 //Voltage reference for resistors temperature NTC
+
     //Mosfet
     #define MOS_DISCH_PRT "IRF3205PBF" //Discharge Mosfet Part Number
     #define MOS_CHRG_PRT "IRF3205PBF" //Charge Mosfet Part Number
@@ -80,10 +96,20 @@
     //adc
     #define ARDUINO_ADC_BIT 12 //number of bits for Arduino ADC
     #define ARDUINO_ADC_MAX_VAL 4095 //maximum value for arduino ADC
-    #define ADC_PRT "ADS1118" //External ADC part number used for current and voltage acquisition 
-    #define ADC_BIT 16 //number of bits of external ADC
-    #define ADC_MAX_VAL 65535 //maximum value of external ADC
-    #define ADC_VREF 4.096 //External ADC internal reference voltage 
-    #define ADC_GAIN 1 //External ADC gain
+    #define ADC_CELL_VOLT_PRT      "ADS1118" // External ADC part number for cell voltage
+    #define ADC_CURR_CHRG_PRT      "ADS1118" // External ADC part number for charge current
+    #define ADC_CURR_DISCH_PRT     "ADS1118" // External ADC part number for discharge current
+    #define ADC_CELL_VOLT_BIT      16 // Number of bits for cell voltage ADC
+    #define ADC_CURR_CHRG_BIT      16 // Number of bits for charge current ADC
+    #define ADC_CURR_DISCH_BIT     16 // Number of bits for discharge current ADC
+    #define ADC_CELL_VOLT_MAX_VAL      65535 // Maximum value for cell voltage ADC
+    #define ADC_CURR_CHRG_MAX_VAL      65535 // Maximum value for charge current ADC
+    #define ADC_CURR_DISCH_MAX_VAL     65535 // Maximum value for discharge current ADC
+    #define ADC_CELL_VOLT_VREF      4.096 // Reference voltage for cell voltage ADC
+    #define ADC_CURR_CHRG_VREF      4.096 // Reference voltage for charge current ADC
+    #define ADC_CURR_DISCH_VREF     4.096 // Reference voltage for discharge current ADC
+    #define ADC_CELL_VOLT_GAIN      1 // Gain for cell voltage ADC
+    #define ADC_CURR_CHRG_GAIN      1 // Gain for charge current ADC
+    #define ADC_CURR_DISCH_GAIN     1 // Gain for discharge current ADC
 
 #endif
