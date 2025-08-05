@@ -3,12 +3,14 @@
  * Description: Implementation of ADC reading functions (internal Arduino ADC and external ADS1118)
  * Author: Phoenix Volt
  * Created: 2025-08-03
- * Last Modified: 2025-08-03 by Riccardo Canali
+ * Last -Modified: 
+ * -2025-08-05 by Riccardo Canali- Added ADS1118 library
+ * -2025-08-03 by Riccardo Canali
  */
 
 #include "adc_utils.h"
 #include <SPI.h>
-#include <ADS1118.h>  // Replace with the actual library if using a specific one
+#include "ADS1118.h"  
 
 // Create external ADC objects with the corresponding chip select pins
 ADS1118 adc_cell(PIN_CS_VOLT);
