@@ -10,8 +10,8 @@
     #define DISCHARGE_H
 
     #include "C:\ashborn-forge\firmware\shared\adc_utils.h"
-    #include "C:\ashborn-forge\firmware\sharedvoltage_utils.h"
-    #include "C:\ashborn-forge\firmware\sharedconfig_protoA.h"
+    #include "C:\ashborn-forge\firmware\shared\voltage_utils.h"
+    #include "C:\ashborn-forge\firmware\config\config_current.h"
 
     // Initializes discharge process
     void initDischarge();
