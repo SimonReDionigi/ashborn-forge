@@ -8,7 +8,7 @@
 
 #include "discharge.h"
 #include "C:\ashborn-forge\firmware\shared\adc_utils.h"
-#include "C:\ashborn-forge\firmware\config\voltage_utils.h"
+#include "C:\ashborn-forge\firmware\shared\voltage_utils.h"
 #include "C:\ashborn-forge\firmware\config\config_current.h"
 
 void initDischarge() {
