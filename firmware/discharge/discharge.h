@@ -9,10 +9,9 @@
 #ifndef DISCHARGE_H // Header guard to prevent multiple inclusions
     #define DISCHARGE_H
 
-    #include "../Shared/adc_utils.h"
-    #include "../Shared/debug_utils.h"
-    #include "../Shared/voltage_utils.h"
-    #include "../Config/config_protoA.h"
+    #include "C:\ashborn-forge\firmware\shared\adc_utils.h"
+    #include "C:\ashborn-forge\firmware\sharedvoltage_utils.h"
+    #include "C:\ashborn-forge\firmware\sharedconfig_protoA.h"
 
     // Initializes discharge process
     void initDischarge();
