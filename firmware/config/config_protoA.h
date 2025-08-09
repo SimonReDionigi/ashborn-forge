@@ -6,6 +6,7 @@
  * Last Modified: 2025-08-01 by Riccardo Canali
  * 
  * Changelog:
+ * - 2025-08-09: Updated ADC configurations
  * - 2025-08-02: Added configuration for each NTC sensors and ADCs
  * - 2025-08-01: Created config_protoA.h and defined the pinout of the Arduino Board and HW settings
  */
@@ -94,20 +95,20 @@
     #define CUR_SENS_DISCH_VREF 5 //Discharge current sensor voltage reference
     #define CUR_SENS_CHRG_VREF 5 //Discharge current sensor voltage reference
     //adc
-    #define ARDUINO_ADC_BIT 12 //number of bits for Arduino ADC
-    #define ARDUINO_ADC_MAX_VAL 4095 //maximum value for arduino ADC
+    #define ARDUINO_ADC_BIT 10 //number of bits for Arduino ADC
+    #define ARDUINO_ADC_MAX_VAL 1023 //maximum value for arduino ADC
     #define ADC_CELL_VOLT_PRT      "ADS1118" // External ADC part number for cell voltage
     #define ADC_CURR_CHRG_PRT      "ADS1118" // External ADC part number for charge current
     #define ADC_CURR_DISCH_PRT     "ADS1118" // External ADC part number for discharge current
     #define ADC_CELL_VOLT_BIT      16 // Number of bits for cell voltage ADC
     #define ADC_CURR_CHRG_BIT      16 // Number of bits for charge current ADC
     #define ADC_CURR_DISCH_BIT     16 // Number of bits for discharge current ADC
-    #define ADC_CELL_VOLT_MAX_VAL      65535 // Maximum value for cell voltage ADC
-    #define ADC_CURR_CHRG_MAX_VAL      65535 // Maximum value for charge current ADC
-    #define ADC_CURR_DISCH_MAX_VAL     65535 // Maximum value for discharge current ADC
-    #define ADC_CELL_VOLT_VREF      4.096 // Reference voltage for cell voltage ADC
-    #define ADC_CURR_CHRG_VREF      4.096 // Reference voltage for charge current ADC
-    #define ADC_CURR_DISCH_VREF     4.096 // Reference voltage for discharge current ADC
+    #define ADC_CELL_VOLT_MAX_VAL      32768 // Maximum value for cell voltage ADC
+    #define ADC_CURR_CHRG_MAX_VAL      32768 // Maximum value for charge current ADC
+    #define ADC_CURR_DISCH_MAX_VAL     32768 // Maximum value for discharge current ADC
+    #define ADC_CELL_VOLT_VREF      6.144 // Reference voltage for cell voltage ADC
+    #define ADC_CURR_CHRG_VREF      6.144 // Reference voltage for charge current ADC
+    #define ADC_CURR_DISCH_VREF     6.144 // Reference voltage for discharge current ADC
     #define ADC_CELL_VOLT_GAIN      1 // Gain for cell voltage ADC
     #define ADC_CURR_CHRG_GAIN      1 // Gain for charge current ADC
     #define ADC_CURR_DISCH_GAIN     1 // Gain for discharge current ADC
