@@ -3,13 +3,15 @@
  * Description: Implementation of discharge control logic
  * Author: Phoenix Volt
  * Created: 2025-08-03
- * Last Modified: 2025-08-03 by Riccardo Canali
+ * Last Modified: 
+ * - 2025-08-09: Moved discharge.cpp to main directory
+ * - 2025-08-03: Created discharge.cpp file
  */
 
-#include "discharge.h"
-#include "C:\ashborn-forge\firmware\shared\adc_utils.h"
-#include "C:\ashborn-forge\firmware\shared\voltage_utils.h"
-#include "C:\ashborn-forge\firmware\config\config_current.h"
+#include "discharge\discharge.h"
+#include "shared\adc_utils.h"
+#include "shared\voltage_utils.h"
+#include "config\config_current.h"
 
 void initDischarge() {
     pinMode(PIN_GATE_DISCH, OUTPUT);
