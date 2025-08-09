@@ -3,9 +3,11 @@
  * Description: Implementation of NTC temperature reading and conversion
  * Author: Phoenix Volt
  * Created: 2025-08-03
+ * Last Modified:
+ * - 2025-08-09: Moved this file to main directory
  */
 
-#include "thermal.h"
+#include "thermal\thermal.h"
 
 // Converts NTC voltage to temperature using the Beta formula
 float convertNTCVoltageToTemp(float v_ntc, float v_ref, float beta, float r_fixed, float r_nominal, float t_nominal) {
