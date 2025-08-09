@@ -21,7 +21,7 @@
 
     private:
         uint8_t _csPin;
-        uint8_t _drdyPin
+        uint8_t _drdyPin;
         uint16_t buildConfig(uint8_t mux);
         void writeConfig(uint16_t config);
         int16_t readData();
