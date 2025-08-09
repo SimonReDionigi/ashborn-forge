@@ -45,7 +45,6 @@ int16_t ADS1118::readADC_SingleEnded(uint8_t channel) {
     // 100,101,110,111
     uint8_t mux = 0b100 | channel; 
     uint16_t config = buildConfig(mux);
-    uint8_t Prova = 0;
     
     SPI.beginTransaction(SPISettings(250000, MSBFIRST, SPI_MODE1));
 
@@ -54,10 +53,6 @@ int16_t ADS1118::readADC_SingleEnded(uint8_t channel) {
       SPI.transfer16(config);
     digitalWrite(_csPin, HIGH);
     // Wait for dummy conversion
-    Serial.println(_drdyPin);
-    Prova = digitalRead(_drdyPin);
-    Serial.print("DRDY Pin Read: ");
-    Serial.println(Prova);
     if (_drdyPin != 255) {
       while (digitalRead(_drdyPin) == HIGH);
     } else {
