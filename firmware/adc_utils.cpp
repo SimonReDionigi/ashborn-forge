@@ -4,18 +4,19 @@
  * Author: Phoenix Volt
  * Created: 2025-08-03
  * Last -Modified: 
- * -2025-08-05 by Riccardo Canali- Added ADS1118 library
- * -2025-08-03 by Riccardo Canali
+ * - 2025-08-09: Added DRDY pin support for ADS1118 and moved adc_utils.cpp to main directory
+ * -2025-08-05: Added ADS1118 library
+ * -2025-08-03: Created adc_utils.cpp
  */
 
-#include "adc_utils.h"
+#include "shared/adc_utils.h"
 #include <SPI.h>
-#include "ADS1118.h"  
+#include "shared/ADS1118.h"  
 
 // Create external ADC objects with the corresponding chip select pins
-ADS1118 adc_cell(PIN_CS_VOLT);
-ADS1118 adc_curr_chrg(PIN_CS_CURR_CHRG);
-ADS1118 adc_curr_disch(PIN_CS_CURR_DISCH);
+ADS1118 adc_cell(PIN_CS_VOLT,3);
+ADS1118 adc_curr_chrg(PIN_CS_CURR_CHRG,3);
+ADS1118 adc_curr_disch(PIN_CS_CURR_DISCH,3);
 
 // Initialize SPI and external ADCs
 void initExternalADCs() {
