@@ -6,10 +6,11 @@
  * Last Modified: 2025-08-03 by Riccardo Canali
  * 
  * Changelog:
+ * - 2025-08-09: Moved this file to main directory
  * - 2025-08-03: Implemented getCellVoltage() with averaging
  */
 
-#include "voltage_utils.h"
+#include "shared/voltage_utils.h"
 
 // Returns the averaged cell voltage using the external ADC
 float getCellVoltage() {
